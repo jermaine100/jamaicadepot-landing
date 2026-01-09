@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JamaicaDepot.com - Under Development</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Jamaica Depot | Automotive, Real Estate & Multivendor Marketplace</title>
+    <meta name="description" content="Jamaica's premier platform for the Jamaican dream. Buy and sell cars, explore real estate, and launch your business on our multivendor marketplace. Built for trust with Jamaica Post logistics.">
+    <meta property="og:title" content="Jamaica Depot - Coming Soon">
+    <meta property="og:description" content="Own a house, drive a car, and start your business. Jamaica's trusted digital marketplace is almost here.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jamaicadepot.com/">
+    
     <style>
         * {
             margin: 0;
@@ -28,7 +37,7 @@
             border-radius: 15px;
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            max-width: 600px;
+            max-width: 700px;
             width: 100%;
         }
         h1 {
@@ -49,6 +58,105 @@
             line-height: 1.6;
             margin-bottom: 1rem;
         }
+        .keywords {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        
+        /* Waitlist Form Styles */
+        .waitlist-form {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        .form-group input[type="text"]:required,
+        .form-group input[type="email"]:required {
+            border-left: 3px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .radio-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .radio-option label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: normal;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.25);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        .submit-btn:hover {
+            background: rgba(255, 255, 255, 0.35);
+            border-color: rgba(255, 255, 255, 0.7);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        #form-message {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            min-height: 20px;
+        }
+        
         .address {
             margin-top: 2.5rem;
             padding-top: 2rem;
@@ -60,6 +168,18 @@
             display: block;
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
+        }
+        
+        .footer-keywords {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+        .footer-keywords strong {
+            font-size: 1rem;
+            margin: 0 0.5rem;
         }
         
         /* Mobile Responsive Styles */
@@ -77,6 +197,10 @@
             }
             .container {
                 padding: 2rem 1.5rem;
+            }
+            .radio-group {
+                flex-direction: column;
+                gap: 0.75rem;
             }
         }
         
@@ -98,6 +222,12 @@
             .address {
                 font-size: 0.9rem;
             }
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            .form-group input[type="tel"] {
+                font-size: 0.95rem;
+                padding: 0.65rem;
+            }
         }
         
         @media screen and (max-width: 360px) {
@@ -112,16 +242,147 @@
 </head>
 <body>
     <div class="container">
-        <h1>JamaicaDepot.com</h1>
+        <h1>Welcome to Jamaica Depot</h1>
         <p class="subtitle">Under Development</p>
-        <p>We're working hard to bring you something amazing!</p>
-        <p>Our marketplace platform is currently being built with care and attention to detail.</p>
+        <p>We're working hard to bring you something amazing! Our marketplace platform for <span class="keywords">Cars</span>, <span class="keywords">Real Estate</span>, and our <span class="keywords">Multivendor Marketplace</span> is currently being built with care and attention to detail.</p>
+        
+        <!-- Waitlist Form -->
+        <div class="waitlist-form">
+            <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Join the Waitlist</h2>
+            <p style="font-size: 0.95rem; margin-bottom: 1.5rem; opacity: 0.9;">Be the first to know when we launch!</p>
+            
+            <form id="waitlist-form">
+                <div class="form-group">
+                    <label for="email">Email Address <span style="color: #ffeb3b;">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Full Name (Optional)</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe">
+                </div>
+                
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp Number (Optional)</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 876 123 4567">
+                </div>
+                
+                <div class="form-group">
+                    <label>How would you like to be notified? <span style="color: #ffeb3b;">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="notify-email" name="notification_preference" value="email" checked>
+                            <label for="notify-email">Email</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="notify-whatsapp" name="notification_preference" value="whatsapp">
+                            <label for="notify-whatsapp">WhatsApp</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="notify-both" name="notification_preference" value="both">
+                            <label for="notify-both">Both</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>What are you interested in? <span style="color: #ffeb3b;">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="interest-vendor" name="interest_type" value="vendor">
+                            <label for="interest-vendor">Vendor</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="interest-buyer" name="interest_type" value="buyer">
+                            <label for="interest-buyer">Buyer</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="interest-both" name="interest_type" value="both" checked>
+                            <label for="interest-both">Both</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Join the Waitlist</button>
+                
+                <div id="form-message"></div>
+            </form>
+        </div>
+        
         <div class="address">
             <strong>Headquarters:</strong>
             6421 N Florida Ave<br>
             Tampa, Florida 33604<br>
             U.S.A
         </div>
+        
+        <div class="footer-keywords">
+            <strong>Cars</strong> | <strong>Real Estate</strong> | <strong>Multivendor Marketplace</strong>
+        </div>
     </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('waitlist-form');
+            const messageDiv = document.getElementById('form-message');
+            const submitBtn = form.querySelector('.submit-btn');
+            
+            // Replace this URL with your Railway API URL after deployment
+            const API_URL = 'https://YOUR-API-SERVICE.railway.app/api/waitlist';
+            
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Disable submit button
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+                messageDiv.innerHTML = '';
+                
+                const formData = {
+                    email: document.getElementById('email').value.trim(),
+                    name: document.getElementById('name').value.trim() || '',
+                    whatsapp: document.getElementById('whatsapp').value.trim() || '',
+                    notification_preference: document.querySelector('input[name="notification_preference"]:checked').value,
+                    interest_type: document.querySelector('input[name="interest_type"]:checked').value
+                };
+                
+                // Basic validation
+                if (!formData.email) {
+                    messageDiv.innerHTML = '<p style="color: #ffeb3b; background: rgba(255, 235, 59, 0.2); padding: 0.75rem; border-radius: 8px;">Please enter your email address.</p>';
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Join the Waitlist';
+                    return;
+                }
+                
+                try {
+                    const response = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (response.ok) {
+                        messageDiv.innerHTML = '<p style="color: #4ade80; background: rgba(74, 222, 128, 0.2); padding: 0.75rem; border-radius: 8px;">✓ Successfully added to waitlist! We\'ll notify you soon.</p>';
+                        form.reset();
+                        // Reset radio buttons to defaults
+                        document.getElementById('notify-email').checked = true;
+                        document.getElementById('interest-both').checked = true;
+                    } else {
+                        messageDiv.innerHTML = '<p style="color: #ef4444; background: rgba(239, 68, 68, 0.2); padding: 0.75rem; border-radius: 8px;">' + (data.error || 'Something went wrong. Please try again.') + '</p>';
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    messageDiv.innerHTML = '<p style="color: #ef4444; background: rgba(239, 68, 68, 0.2); padding: 0.75rem; border-radius: 8px;">Unable to connect. Please check your connection and try again.</p>';
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Join the Waitlist';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

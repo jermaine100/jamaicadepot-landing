@@ -1,7 +1,4 @@
-{
-  "name": "jamaicadepot-landing",
-  "version": "1.0.0",
-  "scripts": {
-    "start": "npx serve -s . -l $PORT"
-  }
-}
+     {
+       "name": "jamaicadepot-landing",
+       "version": "1.0.0"
+     }

@@ -4,7 +4,7 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "/app/.venv/bin/python -m gunicorn -w 4 -b 0.0.0.0:$PORT app:app",
+    "startCommand": "python -m gunicorn -w 4 -b 0.0.0.0:$PORT app:app",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
   }

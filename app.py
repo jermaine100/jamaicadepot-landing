@@ -1,11 +1,16 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import psycopg2
 import os
 from datetime import datetime
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='.')
 CORS(app)  # Allow requests from your domain
+
+# Serve the HTML file at the root URL
+@app.route('/')
+def index():
+    return send_from_directory('.', 'index.html')
 
 # Database connection function
 def get_db_connection():

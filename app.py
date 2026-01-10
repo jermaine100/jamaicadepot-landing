@@ -112,8 +112,5 @@ def add_to_waitlist():
         print(f"Error adding to waitlist: {e}")
         return jsonify({'error': 'Server error. Please try again later.'}), 500
 
-if __name__ == '__main__':
-    # Initialize database on startup
-    init_db()
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=False)
+# Initialize database on startup (runs when module is imported)
+init_db()

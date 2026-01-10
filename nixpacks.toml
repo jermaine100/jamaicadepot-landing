@@ -1,4 +1,5 @@
-providers = ["python"]
+[providers]
+python = true
 
 [phases.setup]
 nixPkgs = ["python311"]
